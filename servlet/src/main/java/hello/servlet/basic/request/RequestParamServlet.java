@@ -9,8 +9,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 1. 파라미터 저소기능
+ * 1. 파라미터 전소기능
  *  http://localhost:8080/request-param?username=hello&age=20
+ *
  */
 
 @WebServlet(name = "requestParamServlet", urlPatterns = "/request-param")
