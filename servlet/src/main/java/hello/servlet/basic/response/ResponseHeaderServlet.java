@@ -53,7 +53,7 @@ public class ResponseHeaderServlet extends HttpServlet {
     }
 
     private void redirect(HttpServletResponse response) throws IOException {
-        //Status Code 382
+        //Status Code 302
         //Location: /basic/hello-for.html
 
         //response.setStatus(HtpServletResponse.SC_FOUND); //302
