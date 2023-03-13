@@ -18,6 +18,7 @@ public class MappingController {
         return "ok";
     }
 
+
     @RequestMapping(value = "/mapping-get-v1", method = RequestMethod.GET)
     public String mappingGetV1() {
         log.info("mappingGetV1");
@@ -27,7 +28,7 @@ public class MappingController {
 
     /**
      * 편리한 축양 애노테이션 (코드보기)
-     *
+     *ㄲ
      * @GetMapping
      * @PostMapping
      * @PutMapping
@@ -54,7 +55,6 @@ public class MappingController {
 
         return "ok";
     }
-
     /**
      * PathVariable
      */
@@ -98,5 +98,32 @@ public class MappingController {
      * Cintent-Type 헤더 기반 추가 매칭 Media Type
      * consumes="application/json"
      * consumes="!application/json
+     * consymes="application"*
+     * consumes="*\/*"
+     * MediaType.APPLICATION_JSON_VALUE
      */
+
+    @PostMapping(value = "/mapping-consume", consumes = "application/json")
+    public String mappingConsumes() {
+        log.info("mappingConsumes");
+
+        return "ok";
+    }
+
+    /*
+     * Accept 헤더 기반 Media Type
+     * produces = "서버가 제공하는 타입"
+     * produces = "text/html"
+     * produces = "!tex/html"
+     * produces = "text/*"
+     * produces = "*\/*"
+     */
+
+    @PostMapping(value = "/mapping-produce", produces = "text/hmtl")
+    public String mappingProduces() {
+        log.info("mappingProduces");
+
+        return "ok";
+    }
+
 }
